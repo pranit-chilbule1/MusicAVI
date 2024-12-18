@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MusicPro - Experience personalized music with RagaWave. AI-driven Indian ragas for mood relaxation and emotional balance.">
+    <title>MusicPro</title>
+
+    <!-- Importing Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background: #1e1e2f;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: linear-gradient(90deg, #4b0082, #800080);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav .nav-links li {
+            display: inline-block;
+        }
+
+        nav .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Main Section */
+        .main-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #111;
+        }
+
+        .image-slider {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .image-slider img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .image-slider img.active {
+            opacity: 1;
+        }
+
+        .slider-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .slider-overlay h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .slider-overlay p {
+            font-size: 1.2em;
+        }
+
+        /* Features Section */
+        #features {
+            padding: 50px;
+            text-align: center;
+            background: #2e2e3f;
+        }
+
+        #features h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-box {
+            background: #44445a;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            width: 30%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .feature-box h3 {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+        }
+
+        .feature-box p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(90deg, #4b0082, #800080);
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🎵 MusicAVI</div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="main-section">
+        <div class="image-slider">
+            <img src="assets/RagaWave1.jpg" alt="Music Player" class="slide active">
+            <img src="assets/RagaWave2.jpg" alt="Playlist" class="slide">
+            <img src="assets/RagaWave4.jpg" alt="Artists" class="slide">
+            <img src="assets/image.png" alt="Mood Relaxation" class="slide">
+        </div>
+        <div class="slider-overlay">
+            <h1>Welcome to MusicAVI</h1>
+            <p>Immerse yourself in music like never before.</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-container">
+            <div class="feature-box" onclick="window.location.href='http://127.0.0.1:5000/'">
+                <img src="assets/feature1.jpg" alt="Feature 1">
+                <h3>Mood-Based Suggestions</h3>
+                <p>Music tailored to your mood.</p>
+            </div>
+            <div class="feature-box" onclick="window.location.href='http://127.0.0.1:5001/'">
+                <img src="assets/feature2.png" alt="Feature 2">
+                <h3>Classification of the Raga</h3>
+                <p>Identify your raga</p>
+            </div>
+            <div class="feature-box"  class="feature-box" onclick="window.location.href='http://localhost:8501'">
+                <img src="assets/feature.jpg" alt="Feature 3">
+                <h3>Generate the Music for Your Mood</h3>
+                <p>Listen to your own music</p>
+            </div>
+            <div class="feature-box" onclick="window.location.href='http://127.0.0.1:5201'">
+                <img src="assets/feature5.jpg" alt="Feature 1">
+                <h3>Identify your ragha</h3>
+                <p>Identify the ragha based on various parameters</p>
+            </div>
+            <div class="feature-box" onclick="window.location.href='http://localhost:8508'">
+                <img src="assets/image2.png" alt="Feature 2">
+                <h3>Visulas in Music</h3>
+                <p>Listen to music with there  visual effect</p>
+            </div>
+            <div class="feature-box" onclick="window.location.href='http://127.0.0.1:8080'">
+                <img src="assets/image (1).png" alt="Feature 3">
+                <h3>Muisc in different regions of India</h3>
+                <p>The accessibility of music from different regions</p>
+            </div>
+            <div class="feature-box" onclick="window.location.href='http://localhost:8509/'">
+                <img src="assets/image3.jpg" alt="Feature 3">
+                <h3>Identify the Emotion of the Music</h3>
+                <p>Determine the Music's Emotion</p>
+            </div>
+            <div class="feature-box" onclick="window.location.href='http://127.0.0.1:8000/'">
+                <img src="assets/image4.jpg" alt="Feature 3">
+                <h3>Muisc Player</h3>
+                <p>Let's start playing a song.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MusicAVI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function changeSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(changeSlide, 1000);
+    </script>
+</body>
+</html>
